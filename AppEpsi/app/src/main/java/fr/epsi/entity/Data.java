@@ -1,4 +1,4 @@
-package fr.epsi.testepsi;
+package fr.epsi.entity;
 
 public class Data {
 
