@@ -6,8 +6,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.StudentsActivity">
-
+    tools:context=".activity.EtudiantActivity">
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_header"/>
+    
         <TextView
             android:id="@+id/textViewName"
             android:textSize="20sp"
