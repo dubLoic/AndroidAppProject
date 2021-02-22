@@ -15,7 +15,7 @@
             android:layout_height="40dp"
             android:layout_centerVertical="true"
             android:layout_marginStart="5dp"
-            android:src="@drawable/back"/>
+            android:src="@drawable/back_arrow"/>
         <TextView
             android:id="@+id/textViewTitle"
             android:layout_centerInParent="true"
