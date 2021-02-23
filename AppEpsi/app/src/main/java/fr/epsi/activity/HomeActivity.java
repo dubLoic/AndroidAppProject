@@ -30,6 +30,7 @@ public class HomeActivity extends MainActivity  implements View.OnClickListener{
                 EtudiantListActivity.displayActivity(this);
                 break;
             case R.id.buttonCategorie:
+                CategoriesActivity.displayActivity(this);
                 break;
         }
     }
