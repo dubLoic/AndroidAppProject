@@ -7,17 +7,17 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 
 import fr.epsi.entity.Data;
-import fr.epsi.entity.Etudiant;
+import fr.epsi.entity.Student;
 
 public class EtudiantServiceImplementation implements EtudiantService {
     @Override
-    public Etudiant getEtudiant(String name) {
+    public Student getEtudiant(String name) {
         try {
             JSONObject jsonObject = new JSONObject(Data.allData);
             JSONArray jsonItems = jsonObject.getJSONArray("items");
             for (int i = 0; i < jsonItems.length(); i++) {
                 if (jsonItems.getJSONObject(i).optString("name") == name)
-                    return new Etudiant(jsonItems.getJSONObject(i));
+                    return new Student(jsonItems.getJSONObject(i));
             }
         }catch (JSONException e) {
             e.printStackTrace();
@@ -26,14 +26,14 @@ public class EtudiantServiceImplementation implements EtudiantService {
     }
 
     @Override
-    public ArrayList<Etudiant> getEtudiants() {
-        ArrayList<Etudiant> etudiants = new ArrayList<>();
+    public ArrayList<Student> getEtudiants() {
+        ArrayList<Student> etudiants = new ArrayList<>();
 
         try {
             JSONObject jsonObject = new JSONObject(Data.allData);
             JSONArray jsonItems = jsonObject.getJSONArray("items");
             for (int i = 0; i < jsonItems.length(); i++) {
-                Etudiant etudiant = new Etudiant(jsonItems.getJSONObject(i));
+                Student etudiant = new Student(jsonItems.getJSONObject(i));
                 etudiants.add(etudiant);
             }
             return etudiants;
