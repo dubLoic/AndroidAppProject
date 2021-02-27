@@ -10,15 +10,15 @@ import com.squareup.picasso.Picasso;
 import fr.epsi.R;
 import fr.epsi.entity.Student;
 
-public class EtudiantInfoActivity extends MainActivity{
+public class StudentInfoActivity extends MainActivity{
 
-    public static void displayActivity(MainActivity activity, Student etudiant){
-        Intent intent = new Intent(activity, EtudiantInfoActivity.class);
-        intent.putExtra("AvatarUrl", etudiant.getUrl());
-        intent.putExtra("Nom", etudiant.getName());
-        intent.putExtra("Email", etudiant.getEmail());
-        intent.putExtra("Groupe", etudiant.getGroup());
-        intent.putExtra("profileUrl", etudiant.getWebsite());
+    public static void displayActivity(MainActivity activity, Student student){
+        Intent intent = new Intent(activity, StudentInfoActivity.class);
+        intent.putExtra("AvatarUrl", student.getUrl());
+        intent.putExtra("Nom", student.getName());
+        intent.putExtra("Email", student.getEmail());
+        intent.putExtra("Groupe", student.getGroup());
+        intent.putExtra("profileUrl", student.getWebsite());
         activity.startActivity(intent);
     }
 
@@ -31,7 +31,6 @@ public class EtudiantInfoActivity extends MainActivity{
 
         String AvatarUrl = getIntent().getExtras().getString("AvatarUrl","");
         String Nom = getIntent().getExtras().getString("Nom","");
-        String Prenom = getIntent().getExtras().getString("Prenom","");
         String Email = getIntent().getExtras().getString("Email","");
         String Groupe = getIntent().getExtras().getString("Groupe","");
         String profileUrl = getIntent().getExtras().getString("profileUrl","");
@@ -50,7 +49,6 @@ public class EtudiantInfoActivity extends MainActivity{
         TextView textViewGroupe = findViewById(R.id.Groupe);
         if(textViewGroupe !=null)
             textViewGroupe.setText(Groupe);
-
 
         TextView textViewProfileLink = findViewById(R.id.ProfileLink);
         if(textViewProfileLink !=null)

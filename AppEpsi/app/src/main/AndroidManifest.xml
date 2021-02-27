@@ -14,9 +14,9 @@
         <activity android:name=".activity.HomeActivity" />
         <activity android:name=".activity.MainActivity"></activity>
         <activity android:name=".activity.StudentListActivity" />
-        <activity android:name=".activity.EtudiantInfoActivity" />
+        <activity android:name=".activity.StudentInfoActivity" />
         <activity android:name=".activity.CategoriesActivity" />
-        <activity android:name=".activity.ProduitListActivity" />
+        <activity android:name=".activity.ProductListActivity" />
         <activity android:name=".activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

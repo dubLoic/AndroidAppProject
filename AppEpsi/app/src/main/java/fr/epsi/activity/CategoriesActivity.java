@@ -2,17 +2,19 @@ package fr.epsi.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
 import fr.epsi.R;
 import fr.epsi.entity.Category;
+import fr.epsi.service.CategoryService;
+import fr.epsi.service.CategoryServiceImplementation;
 
 public class CategoriesActivity extends MainActivity{
-    CategoryService es = new CategoryServiceImplementation();
+    CategoryService cs = new CategoryServiceImplementation();
 
     ArrayList<Category> categories;
     CategoryAdapter categoryAdapter;
@@ -30,5 +32,12 @@ public class CategoriesActivity extends MainActivity{
         setTitle("Categories");
         showBack();
         recyclerView=findViewById(R.id.recyclerView);
+
+        categories = cs.getCategories("https://djemam.com/epsi/categories.json");
+        if(categories.size() > 0){
+            categoryAdapter = new CategoryAdapter(this, categories);
+            recyclerView.setLayoutManager(new LinearLayoutManager(this));
+            recyclerView.setAdapter(categoryAdapter);
+        }
     }
 }
