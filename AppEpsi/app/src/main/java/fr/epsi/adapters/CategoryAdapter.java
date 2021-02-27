@@ -1,9 +1,8 @@
-package fr.epsi.activity;
+package fr.epsi.adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -14,16 +13,18 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 
 import fr.epsi.R;
-import fr.epsi.entity.Student;
+import fr.epsi.activity.MainActivity;
+import fr.epsi.activity.ProductListActivity;
+import fr.epsi.entity.Category;
 
-public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.ViewHolder>{
+public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHolder>{
 
-    private ArrayList<Student> students;
+    private ArrayList<Category> categories;
     private MainActivity activity;
 
-    public StudentAdapter(MainActivity activity, ArrayList<Student> students){
+    public CategoryAdapter(MainActivity activity, ArrayList<Category> categories){
         this.activity=activity;
-        this.students=students;
+        this.categories = categories;
     }
 
     @NonNull
@@ -31,40 +32,40 @@ public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.ViewHold
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
         // Create a new view, which defines the UI of the list item
         View view = LayoutInflater.from(viewGroup.getContext())
-                .inflate(R.layout.cell_student, viewGroup, false);
+                .inflate(R.layout.cell_category, viewGroup, false);
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Student student=students.get(position);
-        holder.getName().setText(student.getName());
+        Category category= categories.get(position);
+        holder.getTitle().setText(category.getTitle());
         holder.getLayoutCell().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                StudentInfoActivity.displayActivity(activity, student);
+                ProductListActivity.displayActivity(activity, category);
             }
         });
     }
 
     @Override
     public int getItemCount() {
-        return students.size();
+        return categories.size();
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        private final TextView name;
+        private final TextView title;
         private final View layoutCell;
 
         public ViewHolder(View view) {
             super(view);
             // Define click listener for the ViewHolder's View
-            name = (TextView) view.findViewById(R.id.textViewName);
-            layoutCell = (View) view.findViewById(R.id.layoutCell);
+            title = (TextView) view.findViewById(R.id.textViewCategory_title);
+            layoutCell = (View) view.findViewById((R.id.layoutCell));
         }
 
-        public TextView getName() {
-            return name;
+        public TextView getTitle() {
+            return title;
         }
 
         public View getLayoutCell() {

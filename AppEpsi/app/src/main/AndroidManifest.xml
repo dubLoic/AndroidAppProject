@@ -17,6 +17,7 @@
         <activity android:name=".activity.StudentInfoActivity" />
         <activity android:name=".activity.CategoriesActivity" />
         <activity android:name=".activity.ProductListActivity" />
+        <activity android:name=".activity.ProductInfoActivity" />
         <activity android:name=".activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

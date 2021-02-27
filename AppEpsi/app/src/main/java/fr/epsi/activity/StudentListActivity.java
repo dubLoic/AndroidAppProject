@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 import fr.epsi.R;
+import fr.epsi.adapters.StudentAdapter;
 import fr.epsi.entity.Student;
 import fr.epsi.service.StudentService;
 import fr.epsi.service.StudentServiceImplementation;
@@ -34,10 +35,9 @@ public class StudentListActivity extends MainActivity{
         recyclerView=findViewById(R.id.recyclerView);
 
         students = es.getEtudiants();
-        if(students.size() > 0){
-            studentAdapter = new StudentAdapter(this, students);
-            recyclerView.setLayoutManager(new LinearLayoutManager(this));
-            recyclerView.setAdapter(studentAdapter);
-        }
+
+        studentAdapter = new StudentAdapter(this, students);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setAdapter(studentAdapter);
     }
 }

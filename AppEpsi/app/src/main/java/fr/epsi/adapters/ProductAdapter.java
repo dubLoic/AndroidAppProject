@@ -1,4 +1,4 @@
-package fr.epsi.activity;
+package fr.epsi.adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,13 +8,13 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
 import fr.epsi.R;
-import fr.epsi.entity.Category;
+import fr.epsi.activity.MainActivity;
+import fr.epsi.activity.ProductInfoActivity;
 import fr.epsi.entity.Product;
 
 public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHolder>{

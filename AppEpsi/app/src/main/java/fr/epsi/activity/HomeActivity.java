@@ -18,7 +18,7 @@ public class HomeActivity extends MainActivity  implements View.OnClickListener{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        findViewById(R.id.buttonCategorie).setOnClickListener(this);
+        findViewById(R.id.buttonCategories).setOnClickListener(this);
         findViewById(R.id.buttonGroup).setOnClickListener(this);
         setTitle("Home");
     }
@@ -29,7 +29,7 @@ public class HomeActivity extends MainActivity  implements View.OnClickListener{
              case R.id.buttonGroup:
                 StudentListActivity.displayActivity(this);
                 break;
-            case R.id.buttonCategorie:
+            case R.id.buttonCategories:
                 CategoriesActivity.displayActivity(this);
                 break;
         }

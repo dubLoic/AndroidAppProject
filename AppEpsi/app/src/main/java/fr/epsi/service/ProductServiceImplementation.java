@@ -11,9 +11,9 @@ import fr.epsi.entity.Product;
 public class ProductServiceImplementation implements ProductService {
 
     @Override
-    public Product getProduct(String path, String name) {
+    public Product getProduct(String p_json, String name) {
         try {
-            JSONObject jsonObject = new JSONObject(Connection.getJSONObject(path));
+            JSONObject jsonObject = new JSONObject(p_json);
             JSONArray jsonItems = jsonObject.getJSONArray("items");
             for (int i = 0; i < jsonItems.length(); i++) {
                 if (jsonItems.getJSONObject(i).optString("name") == name)
@@ -26,11 +26,11 @@ public class ProductServiceImplementation implements ProductService {
     }
 
     @Override
-    public ArrayList<Product> getProducts(String path) {
+    public ArrayList<Product> getProducts(String p_json) {
         ArrayList<Product> products = new ArrayList<>();
 
         try {
-            JSONObject jsonObject = new JSONObject(Connection.getJSONObject(path));
+            JSONObject jsonObject = new JSONObject(p_json);
             JSONArray jsonItems = jsonObject.getJSONArray("items");
             for (int i = 0; i < jsonItems.length(); i++) {
                 Product etudiant = new Product(jsonItems.getJSONObject(i));
