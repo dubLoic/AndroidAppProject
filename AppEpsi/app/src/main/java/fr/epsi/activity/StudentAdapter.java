@@ -54,15 +54,21 @@ public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.ViewHold
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         private final TextView name;
+        private final View layoutCell;
 
         public ViewHolder(View view) {
             super(view);
             // Define click listener for the ViewHolder's View
             name = (TextView) view.findViewById(R.id.textViewName);
+            layoutCell = (View) view.findViewById(R.id.layoutCell);
         }
 
         public TextView getName() {
             return name;
+        }
+
+        public View getLayoutCell() {
+            return layoutCell;
         }
     }
 }

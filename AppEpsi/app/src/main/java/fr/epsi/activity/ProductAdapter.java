@@ -9,6 +9,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
 
 import fr.epsi.R;
@@ -57,6 +59,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
         private final ImageView img;
         private final TextView name;
         private final TextView description;
+        private final View layoutCell;
 
         public ViewHolder(View view) {
             super(view);
@@ -64,6 +67,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
             img = (ImageView) view.findViewById(R.id.imageViewProduct);
             name = (TextView) view.findViewById(R.id.textViewName);
             description = (TextView) view.findViewById(R.id.textViewDescription);
+            layoutCell = (View) view.findViewById(R.id.layoutCell);
         }
 
         public ImageView getImg() {
@@ -74,6 +78,10 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
         }
         public TextView getDescription() {
             return description;
+        }
+
+        public View getLayoutCell() {
+            return layoutCell;
         }
     }
 }

@@ -14,31 +14,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <LinearLayout
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="match_parent"/>
 
-            <TextView
-                android:id="@+id/rayon1"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:padding="15dp"
-                android:text="Boissons"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="16sp"
-                android:background="@drawable/my_border" />
-            <TextView
-                android:id="@+id/rayon2"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:padding="15dp"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="16sp"
-                android:text="Rayon 2"
-                android:background="@drawable/my_border"/>
-        </LinearLayout>
     </ScrollView>
 </LinearLayout>

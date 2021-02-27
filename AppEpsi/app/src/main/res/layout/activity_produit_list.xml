@@ -10,55 +10,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         layout="@layout/layout_header"/>
-    <LinearLayout
-        android:id="@+id/layoutCell"
-        android:orientation="horizontal"
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/imageViewProduit"
-            android:layout_gravity="center_vertical"
-            android:layout_width="120dp"
-            android:scaleType="fitXY"
-            android:layout_height="120dp"/>
-        <LinearLayout
-            android:orientation="vertical"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
             android:layout_width="match_parent"
-            android:layout_gravity="center_vertical"
-            android:layout_height="wrap_content">
-            <TextView
-                android:id="@+id/textViewNomProduit"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:padding="10dp"
-                android:text="Fanta"
-                android:layout_centerVertical="true"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-            <TextView
-                android:id="@+id/textViewDescription"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:paddingTop="7sp"
-                android:text="Description :"
-                android:layout_centerVertical="true"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-            <TextView
-                android:id="@+id/textViewDescriptionContent"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:text="ceci est une magifique description de boissons a acheter près de chez vous"
-                android:layout_centerVertical="true"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+            android:layout_height="match_parent"/>
 
-        </LinearLayout>
-    </LinearLayout>
+    </ScrollView>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="2dp"

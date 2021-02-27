@@ -55,16 +55,21 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         private final TextView title;
-
+        private final View layoutCell;
 
         public ViewHolder(View view) {
             super(view);
             // Define click listener for the ViewHolder's View
             title = (TextView) view.findViewById(R.id.textViewCategory_title);
+            layoutCell = (View) view.findViewById((R.id.layoutCell));
         }
 
         public TextView getTitle() {
             return title;
+        }
+
+        public View getLayoutCell() {
+            return layoutCell;
         }
     }
 }

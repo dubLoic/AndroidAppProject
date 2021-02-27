@@ -24,20 +24,15 @@ public class ProductInfoActivity extends MainActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_etudiant_info);
-        setTitle("Infos Etudiant");
+        setContentView(R.layout.activity_product_info);
+        setTitle(getIntent().getExtras().getString("Nom",""));
         showBack();
 
         String ImageUrl = getIntent().getExtras().getString("Image","");
-        String Nom = getIntent().getExtras().getString("Nom","");
         String Description = getIntent().getExtras().getString("Description","");
 
         ImageView imageView = findViewById(R.id.imgAvatar);
         Picasso.get().load(ImageUrl).into(imageView);
-
-        TextView textViewName = findViewById(R.id.Name);
-        if(textViewName !=null)
-            textViewName.setText(Nom);
 
         TextView textViewDescription = findViewById(R.id.Description);
         if(textViewDescription !=null)
