@@ -27,7 +27,7 @@ public class HomeActivity extends MainActivity  implements View.OnClickListener{
     public void onClick(View v) {
         switch (v.getId()){
              case R.id.buttonGroup:
-                EtudiantListActivity.displayActivity(this);
+                StudentListActivity.displayActivity(this);
                 break;
             case R.id.buttonCategorie:
                 CategoriesActivity.displayActivity(this);

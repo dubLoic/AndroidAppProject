@@ -6,18 +6,18 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-import fr.epsi.entity.Produit;
+import fr.epsi.entity.Product;
 
-public class ProduitServiceImplementation implements ProduitService {
+public class ProductServiceImplementation implements ProductService {
 
     @Override
-    public Produit getProduit(String path, String name) {
+    public Product getProduct(String path, String name) {
         try {
             JSONObject jsonObject = new JSONObject(Connection.getJSONObject(path));
             JSONArray jsonItems = jsonObject.getJSONArray("items");
             for (int i = 0; i < jsonItems.length(); i++) {
                 if (jsonItems.getJSONObject(i).optString("name") == name)
-                    return new Produit(jsonItems.getJSONObject(i));
+                    return new Product(jsonItems.getJSONObject(i));
             }
         }catch (JSONException e) {
             e.printStackTrace();
@@ -26,17 +26,17 @@ public class ProduitServiceImplementation implements ProduitService {
     }
 
     @Override
-    public ArrayList<Produit> getProduits(String path) {
-        ArrayList<Produit> produits = new ArrayList<>();
+    public ArrayList<Product> getProducts(String path) {
+        ArrayList<Product> products = new ArrayList<>();
 
         try {
             JSONObject jsonObject = new JSONObject(Connection.getJSONObject(path));
             JSONArray jsonItems = jsonObject.getJSONArray("items");
             for (int i = 0; i < jsonItems.length(); i++) {
-                Produit etudiant = new Produit(jsonItems.getJSONObject(i));
-                produits.add(etudiant);
+                Product etudiant = new Product(jsonItems.getJSONObject(i));
+                products.add(etudiant);
             }
-            return produits;
+            return products;
         }catch (JSONException e) {
             e.printStackTrace();
         }

@@ -5,12 +5,12 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Rayon {
+public class Category {
     private String category_id;
     private String title;
     private String products_url;
 
-    public Rayon(JSONObject o){
+    public Category(JSONObject o){
         this.setCategory_id(o.optString("category_id", ""));
         this.setTitle(o.optString("title", ""));
         this.setProducts_url(o.optString("products_url", ""));

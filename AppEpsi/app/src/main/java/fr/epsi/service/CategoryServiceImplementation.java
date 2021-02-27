@@ -6,18 +6,18 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-import fr.epsi.entity.Rayon;
+import fr.epsi.entity.Category;
 
-public class RayonServiceImplementation implements RayonService {
+public class CategoryServiceImplementation implements CategoryService {
 
     @Override
-    public Rayon getRayon(String path, String id) {
+    public Category getCategory(String path, String id) {
         try {
             JSONObject jsonObject = new JSONObject(Connection.getJSONObject(path));
             JSONArray jsonItems = jsonObject.getJSONArray("items");
             for (int i = 0; i < jsonItems.length(); i++) {
                 if (jsonItems.getJSONObject(i).optString("category_id") == id)
-                    return new Rayon(jsonItems.getJSONObject(i));
+                    return new Category(jsonItems.getJSONObject(i));
             }
         }catch (JSONException e) {
             e.printStackTrace();
@@ -26,16 +26,16 @@ public class RayonServiceImplementation implements RayonService {
     }
 
     @Override
-    public ArrayList<Rayon> getRayons(String path) {
-        ArrayList<Rayon> rayons = new ArrayList<>();
+    public ArrayList<Category> getCategories(String path) {
+        ArrayList<Category> categories = new ArrayList<>();
         try {
             JSONObject jsonObject = new JSONObject(Connection.getJSONObject(path));
             JSONArray jsonItems = jsonObject.getJSONArray("items");
             for (int i = 0; i < jsonItems.length(); i++) {
-                Rayon rayon = new Rayon(jsonItems.getJSONObject(i));
-                rayons.add(rayon);
+                Category category = new Category(jsonItems.getJSONObject(i));
+                categories.add(category);
             }
-            return rayons;
+            return categories;
         }catch (JSONException e) {
             e.printStackTrace();
         }

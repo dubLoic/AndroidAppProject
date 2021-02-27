@@ -2,9 +2,9 @@ package fr.epsi.service;
 
 import java.util.ArrayList;
 
-import fr.epsi.entity.Rayon;
+import fr.epsi.entity.Category;
 
-public interface RayonService {
-    Rayon getRayon(String path, String id);
-    ArrayList<Rayon> getRayons(String path);
+public interface CategoryService {
+    Category getCategory(String path, String id);
+    ArrayList<Category> getCategories(String path);
 }

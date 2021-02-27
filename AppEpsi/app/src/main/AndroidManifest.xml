@@ -13,7 +13,7 @@
         android:theme="@style/Theme.AndroidAppProject">
         <activity android:name=".activity.HomeActivity" />
         <activity android:name=".activity.MainActivity"></activity>
-        <activity android:name=".activity.EtudiantListActivity" />
+        <activity android:name=".activity.StudentListActivity" />
         <activity android:name=".activity.EtudiantInfoActivity" />
         <activity android:name=".activity.CategoriesActivity" />
         <activity android:name=".activity.ProduitListActivity" />

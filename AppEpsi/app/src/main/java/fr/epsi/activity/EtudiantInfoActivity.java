@@ -8,17 +8,17 @@ import android.widget.TextView;
 import com.squareup.picasso.Picasso;
 
 import fr.epsi.R;
+import fr.epsi.entity.Student;
 
 public class EtudiantInfoActivity extends MainActivity{
 
-    public static void displayActivity(MainActivity activity, String AvatarUrl, String Nom, String Prenom, String Email, String Groupe, String profileUrl){
+    public static void displayActivity(MainActivity activity, Student etudiant){
         Intent intent = new Intent(activity, EtudiantInfoActivity.class);
-        intent.putExtra("AvatarUrl",AvatarUrl);
-        intent.putExtra("Nom",Nom);
-        intent.putExtra("Prenom",Prenom);
-        intent.putExtra("Email",Email);
-        intent.putExtra("Groupe",Groupe);
-        intent.putExtra("profileUrl",profileUrl);
+        intent.putExtra("AvatarUrl", etudiant.getUrl());
+        intent.putExtra("Nom", etudiant.getName());
+        intent.putExtra("Email", etudiant.getEmail());
+        intent.putExtra("Groupe", etudiant.getGroup());
+        intent.putExtra("profileUrl", etudiant.getWebsite());
         activity.startActivity(intent);
     }
 
@@ -41,7 +41,7 @@ public class EtudiantInfoActivity extends MainActivity{
 
         TextView textViewName = findViewById(R.id.Name);
         if(textViewName !=null)
-            textViewName.setText(Nom+" "+Prenom);
+            textViewName.setText(Nom);
 
         TextView textViewEmail = findViewById(R.id.Email);
         if(textViewEmail !=null)

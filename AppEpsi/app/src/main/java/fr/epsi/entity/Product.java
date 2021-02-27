@@ -2,12 +2,12 @@ package fr.epsi.entity;
 
 import org.json.JSONObject;
 
-public class Produit {
+public class Product {
     private String name;
     private String description;
     private String picture_url;
 
-    public Produit(JSONObject o){
+    public Product(JSONObject o){
         this.setName(o.optString("name",""));
         this.setDescription(o.optString("description",""));
         this.setPicture_url(o.optString("picture_url",""));

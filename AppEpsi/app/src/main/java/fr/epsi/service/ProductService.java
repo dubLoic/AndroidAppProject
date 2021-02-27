@@ -2,9 +2,9 @@ package fr.epsi.service;
 
 import java.util.ArrayList;
 
-import fr.epsi.entity.Produit;
+import fr.epsi.entity.Product;
 
-public interface ProduitService {
-    Produit getProduit(String path, String name);
-    ArrayList<Produit> getProduits(String path);
+public interface ProductService {
+    Product getProduct(String path, String name);
+    ArrayList<Product> getProducts(String path);
 }

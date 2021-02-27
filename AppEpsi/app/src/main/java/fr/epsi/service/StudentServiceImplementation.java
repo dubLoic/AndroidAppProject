@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import fr.epsi.entity.Data;
 import fr.epsi.entity.Student;
 
-public class EtudiantServiceImplementation implements EtudiantService {
+public class StudentServiceImplementation implements StudentService {
     @Override
     public Student getEtudiant(String name) {
         try {

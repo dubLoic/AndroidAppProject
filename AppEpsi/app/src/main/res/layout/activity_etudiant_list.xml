@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.EtudiantListActivity">
+    tools:context=".activity.StudentListActivity">
     <include
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,60 +15,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <LinearLayout
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="match_parent"/>
 
-            <Button
-                android:id="@+id/Student1"
-                android:layout_width="157dp"
-                android:layout_height="87dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="40dp"
-                android:text="Etudiant 1" />
-
-            <Button
-                android:id="@+id/Student2"
-                android:layout_width="157dp"
-                android:layout_height="87dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="40dp"
-                android:text="Etudiant 2" />
-
-            <Button
-                android:id="@+id/Student3"
-                android:layout_width="157dp"
-                android:layout_height="87dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="40dp"
-                android:text="Etudiant 3" />
-
-            <Button
-                android:id="@+id/Student4"
-                android:layout_width="157dp"
-                android:layout_height="87dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="40dp"
-                android:text="Etudiant 4" />
-
-            <Button
-                android:id="@+id/Student5"
-                android:layout_width="157dp"
-                android:layout_height="87dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="40dp"
-                android:text="Etudiant 5" />
-
-            <Button
-                android:id="@+id/Student6"
-                android:layout_width="157dp"
-                android:layout_height="87dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="40dp"
-                android:text="Etudiant 6" />
-
-        </LinearLayout>
     </ScrollView>
 
 </LinearLayout>

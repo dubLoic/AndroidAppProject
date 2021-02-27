@@ -2,14 +2,14 @@ package fr.epsi.entity;
 
 import org.json.JSONObject;
 
-public class Etudiant {
+public class Student {
     private String name;
     private String email;
     private String url;
     private String group;
     private String website;
 
-    public Etudiant(JSONObject o){
+    public Student(JSONObject o){
         this.setName(o.optString("name",""));
         this.setEmail(o.optString("email",""));
         this.setUrl(o.optString("picture_url",""));

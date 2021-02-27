@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import fr.epsi.entity.Student;
 
-public interface EtudiantService {
+public interface StudentService {
     Student getEtudiant(String name);
     ArrayList<Student> getEtudiants();
 }
