@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
     <LinearLayout
         android:id="@+id/layoutCell"
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="125dp"
+        android:background="@drawable/my_border" >
 
         <ImageView
             android:id="@+id/imageViewProduct"
@@ -22,19 +24,20 @@
             android:layout_height="wrap_content">
             <TextView
                 android:id="@+id/textViewName"
-                android:textSize="20sp"
+                android:textSize="16sp"
                 android:textStyle="bold"
-                android:textColor="@color/black"
-                android:padding="10dp"
+                android:textColor="@color/grey_write"
+                android:padding="7sp"
                 android:text="Fanta"
                 android:layout_centerVertical="true"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
             <TextView
-                android:textSize="20sp"
+                android:textSize="15sp"
                 android:textStyle="bold"
-                android:textColor="@color/black"
+                android:textColor="@color/grey_write"
                 android:paddingTop="7sp"
+                android:paddingLeft="7sp"
                 android:text="Description :"
                 android:layout_centerVertical="true"
                 android:layout_width="match_parent"
@@ -43,7 +46,10 @@
                 android:id="@+id/textViewDescription"
                 android:textSize="14sp"
                 android:textStyle="bold"
-                android:textColor="@color/black"
+                android:textColor="@color/description"
+                android:minLines="1"
+                android:maxLines = "2"
+                android:paddingLeft="7sp"
                 android:text="ceci est une magifique description de boissons a acheter près de chez vous"
                 android:layout_centerVertical="true"
                 android:layout_width="match_parent"

@@ -18,7 +18,7 @@
                     android:padding="15dp"
                     android:text="Boissons"
                     android:textAlignment="center"
-                    android:textColor="@color/black"
+                    android:textColor="@color/grey_write"
                     android:textSize="16sp"
                     android:background="@drawable/my_border" />
 

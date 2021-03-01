@@ -7,7 +7,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="@android:color/holo_red_light">
+        android:background="@color/header">
         <ImageView
             android:id="@+id/imageViewBack"
             android:visibility="gone"
